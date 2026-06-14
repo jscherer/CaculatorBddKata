@@ -27,9 +27,11 @@ npm test
 
 Expected output:
 ```
-2 scenarios (2 passed)
+2 scenarios (1 pending, 1 passed)
 4 steps (1 pending, 2 skipped, 1 passed)
 ```
+
+The Calculator kata is intentionally left pending — it is the starting point for the BDD pairing exercise.
 
 ---
 
@@ -48,6 +50,7 @@ docs/
   kata-calculator.md      # Guided RED → GREEN → REFACTOR walkthrough
 .vscode/
   tasks.json        # VS Code task: run tests in the integrated terminal
+eslint.config.mjs   # ESLint config — used in the REFACTOR phase
 CLAUDE.md           # Instructions for Claude — BDD coach + pairing partner
 ```
 
@@ -65,13 +68,7 @@ Type this in the Claude chat:
 bootstrap domain kata: TicTacToe
 ```
 
-Claude will create the feature file. Then type:
-
-```
-bootstrap domain kata: TicTacToe
-```
-
-And immediately ask:
+Claude will create the feature file, then ask:
 
 > "Do you want **beginner mode** or **expert mode**?"
 
@@ -106,6 +103,8 @@ Claude enforces Uncle Bob's Three Laws:
 | Command | What it does |
 |---|---|
 | `npm test` | Run all scenarios |
+| `npm run test:coverage` | Run all scenarios + print a coverage table |
+| `npm run lint` | Check for code smells (run after all scenarios are green) |
 | `npm run test:dry` | Dry run — validates feature files without executing |
 | `npm test -- --paths src/features/<kata>.feature` | Run a single kata in isolation |
 
@@ -120,3 +119,5 @@ Or use the VS Code task: `Ctrl+Shift+P` → **Tasks: Run Test Task**
 - **Domain classes are pure.** No Cucumber or Playwright imports inside domain code.
 - **Steps are thin.** Logic lives in the domain class or page object.
 - **One feature file per kata.** Each kata is independently runnable.
+- **ESLint is the REFACTOR tool.** Run `npm run lint` when all scenarios are green to surface code smells (unused variables, implicit any, etc.).
+- **Coverage shows what's exercised.** Run `npm run test:coverage` in REFACTOR to see which domain code lines your BDD scenarios hit.
