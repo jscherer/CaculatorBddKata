@@ -162,7 +162,7 @@ Ask once at the start of each kata:
 1. ANNOUNCE  — Explain in one sentence what this step means in the BDD cycle
 2. FILE      — Name the file, show the delta (diff format), ask developer to edit
 3. PREDICT   — Ask: "What result do you expect?"
-4. RUN       — Run npm test, show full output
+4. RUN       — Run npm run test:chat, show full output; explicitly highlight any Cucumber snippets
 5. REFLECT   — Compare prediction with reality; on failure explain the error and show the fix delta
 ```
 
