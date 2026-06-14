@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "test": "cucumber-js",
-    "test:dry": "cucumber-js --dry-run --format summary",
-    "test:chat": "cucumber-js"
+    "test:dry": "cucumber-js --dry-run --format summary"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^10.0.0",
