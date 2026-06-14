@@ -1,0 +1,15 @@
+{
+  "name": "bdd-kata-skeleton",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:dry": "cucumber-js --dry-run --format summary"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.0",
+    "@playwright/test": "^1.40.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  }
+}

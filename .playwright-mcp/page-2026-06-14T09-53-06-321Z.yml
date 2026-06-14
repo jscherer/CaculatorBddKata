@@ -1,0 +1,4 @@
+- generic [active] [ref=e1]:
+  - heading "TIC TAC TOE" [level=1] [ref=e2]
+  - generic [ref=e3]: Player X's turn
+  - button "New Game" [ref=e14] [cursor=pointer]
