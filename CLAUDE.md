@@ -144,6 +144,8 @@ REFACTOR → Clean up the code → run npm test → confirm still green
 - Does not change observable behaviour
 - `npm test` is green again after each refactoring step
 - Name the specific smell before changing anything
+- Run `npm run test:coverage` to see which lines of domain code are exercised by the BDD scenarios
+- Run `npm run lint` to surface code smells — clean them up without changing observable behaviour
 
 ### Your role as pairing partner
 
