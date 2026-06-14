@@ -115,6 +115,7 @@ Files created incrementally:
 - **Steps are thin.** Logic lives in the domain class or page object, not in step definitions.
 - **Reports are generated automatically** to `reports/report.html` after every run.
 - **Language is consistent.** All files in a kata use the same language. No mixing.
+- **ESLint is the REFACTOR tool.** Only run `npm run lint` when all scenarios are green. It surfaces code smells (unused variables, implicit any, etc.) so you can clean them up without changing observable behaviour. Use `// eslint-disable-next-line -- <reason>` to suppress a specific line when intentional.
 
 ---
 
