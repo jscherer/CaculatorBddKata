@@ -80,7 +80,7 @@ Do not create steps or domain class yet.
 See "Starting a kata in TDD mode" below.
 
 Files created incrementally:
-- `src/steps/<kata-name>.steps.ts` — step definitions, `this.context` for state
+- `src/steps/<kata-name>.steps.ts` — step definitions, typed properties on `CustomWorld` for state
 - `src/<kata-name>/<KataName>.ts` — pure domain class, no Playwright, no I/O
 
 **Done when:**
@@ -109,6 +109,7 @@ Files created incrementally:
 ## Project conventions
 
 - **World is the glue.** Steps access `this.page` via CustomWorld — never import Playwright directly.
+- **Use typed properties for state.** Add kata-specific properties directly to `CustomWorld` (e.g. `a`, `b`, `result`) instead of the generic `this.context` dictionary — more readable and type-safe.
 - **Domain classes are pure.** No Cucumber or Playwright imports inside `src/<kata-name>/`.
 - **One feature file per kata.** Run in isolation: `npm test -- --paths src/features/<kata-name>.feature`
 - **Steps are thin.** Logic lives in the domain class or page object, not in step definitions.

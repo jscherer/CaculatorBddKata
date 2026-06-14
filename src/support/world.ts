@@ -6,6 +6,9 @@ export class CustomWorld extends World {
   browserContext!: BrowserContext;
   page!: Page;
   context: Record<string, unknown> = {};
+  a: number = 0;
+  b: number = 0;
+  result: number = 0;
 
   constructor(options: IWorldOptions) {
     super(options);

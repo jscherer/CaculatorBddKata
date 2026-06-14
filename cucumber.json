@@ -3,7 +3,7 @@
     "require": ["src/support/**/*.ts", "src/steps/**/*.ts"],
     "requireModule": ["ts-node/register"],
     "paths": ["src/features/**/*.feature"],
-    "format": ["progress-bar", "html:reports/report.html"],
+    "format": ["@cucumber/pretty-formatter", "html:reports/report.html"],
     "parallel": 0
   }
 }
