@@ -28,7 +28,7 @@ npm test
 Expected output:
 ```
 2 scenarios (2 passed)
-4 steps (4 passed)
+4 steps (1 pending, 2 skipped, 1 passed)
 ```
 
 ---
@@ -86,7 +86,7 @@ bootstrap ui kata: GoogleSearch
 
 Claude will scaffold feature file, step definitions, and a page object incrementally — one step at a time, always starting from RED.
 
-### 3. The pairing loop
+### 3. The Red-Green-Refactor loop
 
 ```
 RED      → Write one step definition → run npm test → confirm it fails

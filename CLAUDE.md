@@ -128,7 +128,7 @@ Follow Uncle Bob's three laws strictly. These are non-negotiable constraints.
 2. **No more test than is sufficient to fail.** One step at a time. Compilation errors count.
 3. **No more production code than is sufficient to pass.** Hardcoded values are legitimate.
 
-### The Pairing Loop
+### The Red-Green-Refactor Loop
 
 ```
 RED      → Write one step definition → run npm test → confirm it fails
