@@ -83,7 +83,7 @@ bootstrap ui kata: GoogleSearch
 
 Claude will scaffold feature file, step definitions, and a page object incrementally — one step at a time, always starting from RED.
 
-### 3. The Red-Green-Refactor loop
+### 3. The Red-Green-Refactor Loop
 
 ```
 RED      → Write one step definition → run npm test → confirm it fails
@@ -121,3 +121,10 @@ Or use the VS Code task: `Ctrl+Shift+P` → **Tasks: Run Test Task**
 - **One feature file per kata.** Each kata is independently runnable.
 - **ESLint is the REFACTOR tool.** Run `npm run lint` when all scenarios are green to surface code smells (unused variables, implicit any, etc.).
 - **Coverage shows what's exercised.** Run `npm run test:coverage` in REFACTOR to see which domain code lines your BDD scenarios hit.
+- **Language is consistent.** All files in a kata use the same language. No mixing.
+
+---
+
+## References
+
+- [Getting started with Playwright, TypeScript & Cucumber BDD](https://medium.com/@varg.james/getting-started-with-playwright-typescript-cucumber-bdd-a492d2bc2d4c) — the article this skeleton is based on
