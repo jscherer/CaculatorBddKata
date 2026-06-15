@@ -13,18 +13,24 @@ Given('the numbers {int} and {int}', function (this: CustomWorld, a: number, b: 
 });
 
 // WHEN — perform the action
-// Add the two numbers and store the result.
-// 1. Assign this.a + this.b to this.result
+// Call add() with the two numbers and store the result in this.result.
+// 1. Assign the result of add(this.a, this.b) to this.result
 // 2. Remove the return 'pending' line
 When('I add them', function (this: CustomWorld) {
   return 'pending';
 });
 
 // THEN — verify the outcome
-// Check that the actual result matches the expected value from the scenario.
+// Throw an Error if the result doesn't match — Cucumber treats a thrown error as a failure.
 // 1. Compare this.result with expected
-// 2. Throw an Error if they don't match — Cucumber treats a thrown error as a failure
+// 2. Throw an Error if they don't match
 // 3. Remove the return 'pending' line
 Then('the result is {int}', function (this: CustomWorld, expected: number) {
   return 'pending';
 });
+
+// Fake implementation of Calculator logic.
+// You can use this in the When step above and change it following the BDD cycle
+function add(a: number, b: number): number {
+  return 0;
+}

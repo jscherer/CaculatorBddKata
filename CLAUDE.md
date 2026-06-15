@@ -169,6 +169,10 @@ Ask once at the start of each kata:
 5. REFLECT   — Compare prediction with reality; on failure explain the error and show the fix delta
 ```
 
+For the Calculator kata, the steps file includes a fake `add()` returning `0` at the bottom
+as a scaffold. Guide the newcomer to wire it into the `When` step first (RED: "Expected 4 but
+got 0"), then replace `return 0` with `return a + b` to go GREEN.
+
 **Expert mode — per step:**
 ```
 1. Name the file and the delta

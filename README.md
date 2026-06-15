@@ -12,7 +12,7 @@ This repo gives you a ready-to-run BDD environment and a `CLAUDE.md` file that t
 
 It ships with:
 - A **smoke test** that verifies the skeleton is wired correctly
-- A **Calculator kata** as a worked example of the full BDD cycle
+- A **Calculator kata** as a worked example of the full BDD cycle — the steps file includes a fake `add()` returning `0` as a starting hint. Wire it into the `When` step to get a meaningful RED ("Expected 4 but got 0"), then replace `return 0` with the real logic to go GREEN.
 
 ---
 
